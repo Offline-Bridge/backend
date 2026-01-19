@@ -6,18 +6,12 @@ import { eq, inArray, sql } from "drizzle-orm";
 import { db } from "./db";
 import { users } from "./db/schema";
 
-// DELETE or COMMENT OUT these lines:
+
 const credentials = {
     apiKey: process.env.AT_API_KEY!,
     username: process.env.AT_USERNAME || "sandbox",
 };
 
-// USE THIS INSTEAD (Replace with your ACTUAL values):
-// const credentials = {
-//   apiKey:
-//     "atsk_9b762cb98d18b34487ca2da029d0b1dfcb725a7da4694de71daab0e95e010e78ac3d0c0c",
-//   username: "sandbox", // <--- MUST BE "sandbox" (lowercase)
-// };
 
 const AfricasTalking = require("africastalking")(credentials);
 const sms = AfricasTalking.SMS;
